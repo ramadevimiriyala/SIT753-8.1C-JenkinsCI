@@ -10,11 +10,12 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                echo 'Running Jest tests...'
-                bat 'npm test'
-            }
-        }
+    steps {
+        echo 'Running tests...'
+        bat 'npm test'
+    }
+}
+
 
         stage('Deploy') {
             steps {
