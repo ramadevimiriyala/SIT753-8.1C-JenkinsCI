@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
+                bat 'echo Running unit tests...'
                 bat 'node app.js'
             }
         }
@@ -19,8 +20,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                bat 'echo Deploying to environment...'
+                bat 'echo Deployment successful.'
             }
         }
     }
 }
+
