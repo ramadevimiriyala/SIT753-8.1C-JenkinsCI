@@ -9,20 +9,17 @@ pipeline {
             }
         }
 
-       stage('Test') {
-    steps {
-        echo 'Running Jest tests...'
-        bat 'npm test'
-    }
-}
-
+        stage('Test') {
+            steps {
+                echo 'Running Jest tests...'
+                bat 'npm test'
+            }
+        }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
-                bat 'echo Deployment successful.'
+                echo 'Deployment successful.'
             }
         }
     }
 }
-
